@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_normal"
+    android:orientation="vertical"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
+    android:paddingBottom="@dimen/margin_large"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@drawable/edit_profile_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_large">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_extra_large_xxxx"
+            android:src="@drawable/join_now_pledge_icon" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
+            android:text="@string/pledge"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_x" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/i_will_never_cheat_description"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/clickCheckbox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="@dimen/margin_medium"-->
+<!--            android:background="@drawable/button_bg_normal"-->
+<!--            android:gravity="center">-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/checkboxClickToAgree"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:button="@drawable/fair_play_edge_checkbox"-->
+<!--                android:drawablePadding="@dimen/margin_normal"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingEnd="@dimen/margin_normal"-->
+<!--                android:paddingStart="@dimen/margin_normal"-->
+<!--                android:paddingTop="@dimen/margin_medium"-->
+<!--                android:paddingBottom="@dimen/margin_medium"-->
+<!--                android:text="@string/click_to_agree"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/theme_color"-->
+<!--                android:textStyle="bold" />-->
+<!--            &lt;!&ndash;        android:button="@drawable/click_to_agree"&ndash;&gt;-->
+<!--        </RelativeLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/clickCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/button_bg_normal"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <CheckBox
+                    android:id="@+id/checkboxClickToAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/fair_play_edge_checkbox"
+                    android:drawablePadding="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/margin_small_x"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:text="@string/agree_to"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/challenge_terms_condition"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium"
+                    android:id="@+id/termAndConditions"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <com.steppi.steppifitness.views.STPxBoldTextView
+        android:id="@+id/dialogOK"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@drawable/button_bg_normal"
+        android:gravity="center"
+        android:paddingStart="@dimen/button_height_large"
+        android:paddingEnd="@dimen/button_height_large"
+        android:text="@string/join"
+        android:textAllCaps="true"
+        android:textColor="@color/indicator_normal"
+        android:textSize="@dimen/text_size_medium" />
+</RelativeLayout>

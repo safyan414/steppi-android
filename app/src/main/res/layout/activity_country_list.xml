@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookEditText
+            android:id="@+id/countrySearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/edit_text_bg"
+            android:drawableEnd="@drawable/search"
+            android:drawablePadding="@dimen/margin_normal"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="@dimen/margin_medium"
+            android:paddingEnd="@dimen/margin_medium"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/button_bg_enabled_color"
+            android:textSize="@dimen/text_size_medium_x" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal" />
+    </LinearLayout>
+</LinearLayout>

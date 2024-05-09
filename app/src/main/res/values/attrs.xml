@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OtpView">
+        <attr name="android:inputType" />
+        <attr name="textColorHighlighted" format="color" />
+        <attr name="textColorNormal" format="color" />
+        <attr name="backgroundFilled" format="color" />
+        <attr name="backgroundNormal" format="color" />
+        <attr name="backgroundShape" format="reference" />
+        <attr name="separatorWidth" format="dimension" />
+        <attr name="itemCount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="STGothamRoundedLightEditText">
+        <attr name="activeImage" format="reference" />
+        <attr name="inActiveImage" format="reference" />
+    </declare-styleable>
+
+</resources>

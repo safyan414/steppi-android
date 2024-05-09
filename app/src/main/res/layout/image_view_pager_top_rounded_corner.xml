@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rounded_top_corner"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageViewTopRoundedView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_rounded_top_corner"
+        app:cardBackgroundColor="@color/edit_text_bg_color">
+        <!--        app:cardCornerRadius="@dimen/margin_small"-->
+
+        <ImageView
+            android:id="@+id/imageViewTopRounded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/place_holder_image"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/steppiLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/steppi_logo"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

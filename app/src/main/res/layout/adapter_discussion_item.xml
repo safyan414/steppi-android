@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/margin_small"
+    app:cardElevation="@null">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_profile_bg"
+        android:padding="@dimen/margin_normal">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/profile"
+                android:layout_width="@dimen/margin_extra_large_xxxx"
+                android:layout_height="@dimen/margin_extra_large_xxxx"
+                android:src="@drawable/profile_normal"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="1dp"
+                app:siRadius="@dimen/margin_small"
+                app:siSquare="true" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:text="Mazen Pacha"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium_x" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/edit_message"
+                android:layout_width="@dimen/margin_large_xx"
+                android:layout_height="@dimen/margin_large_xx"
+                android:src="@drawable/edit_icon"
+                android:tint="@android:color/white" />
+
+        </LinearLayout>
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:id="@+id/discussion_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLayout"
+            android:layout_marginTop="@dimen/margin_medium_xxxx"
+            android:text="@string/dumy"
+            android:textColor="@android:color/white" />
+
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/msgDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discussion_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="12/10/2019"
+            android:textColor="@color/edit_text_bg_stroke_color" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

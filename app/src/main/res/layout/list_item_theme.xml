@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:layout_marginStart="@dimen/margin_small_xx"
+    android:layout_marginEnd="@dimen/margin_small_xx"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_border_selector_small">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/themeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/space_race_theme_bg"
+            app:siRadius="@dimen/margin_small" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_normal"
+        android:src="@drawable/click_to_agree_tick"
+        android:visibility="invisible" />
+</RelativeLayout>

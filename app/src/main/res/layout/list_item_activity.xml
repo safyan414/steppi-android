@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_normal"
+    android:background="@drawable/edit_profile_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_medium">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/analyticsDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Sunday,"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/analyticsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="1 March"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+        android:id="@+id/analyticsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:text="1,258 Steps"
+        android:textColor="@color/button_bg_enabled_color"
+        android:textSize="@dimen/text_size_medium" />
+</RelativeLayout>

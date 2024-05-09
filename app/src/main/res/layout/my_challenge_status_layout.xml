@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:baselineAligned="false"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/onGoingCell"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="3dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg_enabled_small"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_profile_bg_small"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp"
+            tools:ignore="ContentDescription">
+
+            <ImageView
+                android:id="@+id/onGoingImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_small"
+                android:scaleType="centerInside"
+                android:src="@drawable/my_challenge_ongoing_enabled" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                android:id="@+id/ongoingChallenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/ongoing"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_x" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/upComingCell"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="3dp"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_profile_bg_small"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp"
+            tools:ignore="ContentDescription">
+
+            <ImageView
+                android:id="@+id/upComingImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_small"
+                android:scaleType="centerInside"
+                android:src="@drawable/my_challenge_upcoming_disabled" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                android:id="@+id/upComingChallenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/upcoming"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_x" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/corporateCell"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="3dp"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_bg">
+
+            <ImageView
+                android:id="@+id/corporateLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/youtube"
+                android:scaleType="centerCrop"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/backgrounViewCorporate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="3dp"
+                tools:ignore="ContentDescription"
+                android:background="@drawable/edit_profile_bg_small"
+
+                >
+
+                 <ImageView
+                     android:id="@+id/corporateImage"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_margin="@dimen/margin_small"
+                     android:scaleType="centerInside"
+                     android:src="@drawable/my_challenge_corporate_disabled"
+                    />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/corporateChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/organization"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+
+             </LinearLayout>
+
+
+
+         </RelativeLayout>
+
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/completedCell"
+         android:layout_width="0dp"
+         android:layout_height="85dp"
+         android:layout_gravity="center"
+         android:layout_weight="1"
+         android:background="@color/transparent"
+         android:gravity="center_horizontal"
+         android:orientation="horizontal"
+         android:padding="2dp">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/edit_profile_bg_small"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:padding="3dp"
+             tools:ignore="ContentDescription">
+
+             <ImageView
+                 android:id="@+id/completedImage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_margin="@dimen/margin_small"
+                 android:scaleType="centerInside"
+                 android:src="@drawable/my_challenge_completed_disabled" />
+
+             <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                 android:id="@+id/completedChallenge"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginTop="@dimen/margin_small"
+                 android:gravity="center"
+                 android:text="@string/completed_label"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/text_size_normal_x" />
+         </LinearLayout>
+     </LinearLayout>
+ </LinearLayout>

@@ -1,0 +1,30 @@
+{
+	"agcgw":{
+		"backurl":"connect-dre.dbankcloud.cn",
+		"url":"connect-dre.hispace.hicloud.com"
+	},
+	"client":{
+		"cp_id":"2640971000000964922",
+		"product_id":"7520582782905537191",
+		"client_id":"464391121678632000",
+		"client_secret":"7F75E295DF155778F1BBC4AB4264BC72E69FABBB530C2D367FAE387CF2BBD1F5",
+		"app_id":"102997517",
+		"package_name":"com.steppi.steppifitness",
+		"api_key":"CgB6e3x9q7RQ15Ptoo8E/ZewAG+lvvStZWBrjUvXi74ZIXD9i3DpwjdjqScaFL5wtk714fT7hFmSJfmz5XWWzGAE"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"cloudstorage":{
+			"storage_url":"https://ops-dre.agcstorage.link"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn"
+		}
+	},
+	"region":"DE",
+	"configuration_version":"1.0"
+}

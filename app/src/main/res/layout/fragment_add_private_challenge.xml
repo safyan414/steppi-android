@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_color"
+        android:orientation="vertical"
+        tools:ignore="ContentDescription">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edit_text_bg_color">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/add_private_challenge_flag_image" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_color"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/private_challenge_or_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xxx" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                android:id="@+id/createChallenge"
+                style="@style/ButtonSolidTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/text_create"
+                android:textAllCaps="true"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium_x" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_large_xxxx"
+                android:text="@string/challenge_code_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium_x" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/challenge_code_desc"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xx" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightEditText
+                android:id="@+id/challengeCode"
+                style="@style/EditTextStyle"
+                android:gravity="center"
+                android:hint="@string/challenge_code_hint"
+                android:imeOptions="actionDone"
+                android:textColorHint="@color/button_bg_normal_color"
+                android:textSize="@dimen/text_size_normal_xx" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                android:id="@+id/findChallenge"
+                style="@style/ButtonSolidTheme"
+                android:layout_width="180dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:background="@drawable/button_selector_normal"
+                android:gravity="center"
+                android:text="@string/find"
+                android:textAllCaps="true"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium_x" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

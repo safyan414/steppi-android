@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/margin_small">
+
+        <LinearLayout
+            android:id="@+id/allChallengeCell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                    android:id="@+id/allChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dfcCell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/dfcImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/challenge_type_dfc" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/dfcChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/dfc"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toughMudderChallengeCell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/toughMudderChallengeImageDefault"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small_xxx"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small_xxx"
+                    android:src="@drawable/steppi_default" />
+
+                <ImageView
+                    android:id="@+id/toughMudderChallengeImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small_xxx"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small_xxx"
+                    android:src="@drawable/team_angel_wolf_large"
+                    android:visibility="gone" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/toughMudderChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pc1Cell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/pc1Image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_small"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/challenge_type_pc_one" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/pc1Challenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/pc1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pc2Cell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/pc2Image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_small"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/challenge_type_pc_two" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/corporateChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/pc2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pc3Cell"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="@drawable/challenge_tab_selector"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/pc3Image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_small"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/challenge_type_pc_three" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                    android:id="@+id/pc3Challenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/pc3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_x" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</HorizontalScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/topLayout"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#0B0B0B"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topLayoutData"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_extra_large_xxxx"
+        android:layout_marginEnd="@dimen/margin_extra_large_xxxx"
+        android:background="@drawable/edit_profile_bg"
+        android:paddingTop="@dimen/margin_ultra_large"
+        android:paddingBottom="@dimen/margin_ultra_large">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/successTick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/success_tick" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/successMessage"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_extra_large_xxxx"
+                android:layout_marginTop="@dimen/margin_extra_large_xxxx"
+                android:layout_marginEnd="@dimen/margin_extra_large_xxxx"
+                android:gravity="center"
+                android:text="@string/you_have_successfully_updated_your_profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+        android:id="@+id/okay"
+        style="@style/ButtonSolidTheme"
+        android:layout_marginTop="@dimen/margin_extra_large_x"
+        android:text="@string/ok"
+        android:textColor="@color/theme_color"
+        android:visibility="gone" />
+</LinearLayout>

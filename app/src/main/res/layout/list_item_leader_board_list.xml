@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainBg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_small"
+    android:background="@drawable/green_border_selector"
+    android:orientation="vertical"
+    android:padding="1.5dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/listBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_profile_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_normal"
+        tools:ignore="ContentDescription">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+            android:id="@+id/pcTwoAnimationLeaderBoardPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_normal"
+            android:background="@drawable/edit_text_bg_small"
+            android:gravity="center"
+            android:minHeight="@dimen/button_height_medium"
+            android:paddingStart="@dimen/margin_medium_xx"
+            android:paddingEnd="@dimen/margin_medium_xx"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_xxxx"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_normal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_medium_xx"
+            android:paddingEnd="@dimen/margin_medium_xx"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_xxxx"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/rankingImage"
+            android:layout_width="@dimen/button_height_normal"
+            android:layout_height="@dimen/button_height_normal"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/margin_normal"
+            android:src="@drawable/win_label_one"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="@dimen/button_height_normal"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/corporate_icon_bg"
+                    android:scaleType="centerInside"
+                    app:siRadius="@dimen/margin_small" />
+
+                <ImageView
+                    android:id="@+id/userImageManRunning"
+                    android:layout_width="@dimen/button_height_normal"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/corporate_icon_bg"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/man_running"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal_xxx" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                            android:id="@+id/steps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/text_size_normal_x" />
+
+                        <ImageView
+                            android:id="@+id/next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_normal"
+                            android:src="@drawable/arrow_next_small"
+                            android:tint="@color/edit_text_bg_color"
+                            android:visibility="gone" />
+
+                        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                            android:id="@+id/stepsLabelMyUser"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/steps"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_normal_x" />
+                    </LinearLayout>
+
+                    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                        android:id="@+id/stepsMinutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_size_normal_x"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                    <!--<LinearLayout
+                        android:id="@+id/dailyStepsLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                            android:id="@+id/dailySteps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/text_size_normal_x" />
+
+                        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                            android:id="@+id/dailyStepsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/daily_steps_"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_normal_x" />
+                    </LinearLayout>-->
+
+                    <!--<LinearLayout
+                        android:id="@+id/activeMinutesLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                            android:id="@+id/activeMinutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/text_size_normal_x" />
+
+                        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                            android:id="@+id/activeMinutesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/daily_active_minutes"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_normal_x" />
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cheerLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cheers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cheer_zero_count_disabled" />
+
+                    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                        android:id="@+id/cheerCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/cheer_count_label"
+                        android:textAllCaps="true"
+                        android:textColor="@color/edit_text_bg_stroke_color"
+                        android:textSize="@dimen/margin_small_xx" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_small_xx"
+                android:background="@color/edit_text_bg_stroke_color"
+                android:visibility="gone" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                android:id="@+id/voucherDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:drawableStart="@drawable/challenge_reward"
+                android:drawablePadding="@dimen/margin_medium"
+                android:text="Buy one get one free from h&amp;m"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/text_size_normal_xxxx"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

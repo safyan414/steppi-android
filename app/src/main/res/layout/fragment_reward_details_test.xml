@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/reward_bg"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/pageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:focusableInTouchMode="true">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_above="@+id/indicator"
+                android:layout_marginBottom="42dp"
+                android:background="@color/black"
+                android:overScrollMode="never" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logoNormalLayout"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="1dp"
+                android:background="@drawable/corporate_icon_bg"
+                app:cardCornerRadius="@dimen/margin_small">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="@dimen/margin_small">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_theme_small"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_large"
+                android:src="@drawable/view_pager_previous_button" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:src="@drawable/view_pager_next_button" />
+
+            <com.pixelcan.inkpageindicator.InkPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:visibility="gone"
+                app:ipi_currentPageIndicatorColor="@color/black"
+                app:ipi_dotDiameter="6dp"
+                app:ipi_dotGap="9dp"
+                app:ipi_pageIndicatorColor="#C3C3C3" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_normal_xx"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:id="@+id/locationSpinner"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/edit_profile_bg"
+                android:drawableStart="@drawable/location_icon"
+                android:drawableEnd="@drawable/arrow_down_white"
+                android:text="@string/select_location"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xx"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:id="@+id/noRewardsListData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_extra_large_xxxx"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/margin_extra_large_xxxx"
+                android:text="@string/no_rewards_data"
+                android:textColor="@color/text_white"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/storesData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/phoneNumber"
+                    style="@style/EditTextStyle"
+                    android:layout_marginTop="@dimen/margin_normal_xx"
+                    android:background="@drawable/edit_profile_bg"
+                    android:drawableStart="@drawable/phone_number_label"
+                    android:text="(904)171-5701"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal_xx" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                    android:id="@+id/shopNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_normal_xx"
+                    android:background="@drawable/light_blue_bg"
+                    android:drawableStart="@drawable/location_direction_icon"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_medium"
+                    android:singleLine="false"
+                    android:text="Shop Number 1162 Ground Level test test"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_size_normal_xx" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_small_xx">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rewardsDetailsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                        android:id="@+id/noRewardsData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_extra_large_xxxx"
+                        android:text="@string/no_rewards_data"
+                        android:textColor="@color/text_white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

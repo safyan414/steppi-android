@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_large"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_large"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/glow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/steps_reached_glow" />
+
+        <ImageView
+            android:id="@+id/sparkles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/steps_reached_sparkles" />
+
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/steps_reached_group" />
+
+        <!--<ImageView
+            android:id="@+id/mainStepsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_normal"
+            android:src="@drawable/steps_reached_main" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/mainStepsContainer"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:paddingStart="@dimen/margin_small"
+            android:src="@drawable/steps_reached_stars" />-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/dialogUpdateCancel"
+            style="@style/ButtonSolidTheme"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:background="@drawable/button_solid_theme_stroke"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium_xxx"
+            android:visibility="gone" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/dialogUpdateConfirm"
+            style="@style/ButtonSolidTheme"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_size_medium_xxx" />
+    </LinearLayout>
+
+</LinearLayout>

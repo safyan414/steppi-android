@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deviceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/button_height_normal"
+    android:background="@drawable/button_bg_device"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingEnd="@dimen/margin_large"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/deviceImage"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/fitbit_unselected" />
+
+    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+        android:id="@+id/deviceName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_weight="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium_x" />
+
+    <ImageView
+        android:id="@+id/selectDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/tick"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/infoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_large"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_normal"
+        android:src="@drawable/info_icon"
+        android:visibility="gone" />
+</LinearLayout>

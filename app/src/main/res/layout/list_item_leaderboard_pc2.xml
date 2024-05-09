@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myTeamCellLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:background="@drawable/rounded_theme_stroke_small"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/myTeamsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/rankingImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:visibility="gone" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/edit_text_bg_small"
+            android:gravity="center"
+            android:minHeight="@dimen/button_height_medium"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_xxxx"
+            android:visibility="visible" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/teamName"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".9"
+            android:background="@color/transparent"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="0dp"
+            android:text="Team A"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/text_size_normal_xxx" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="@integer/locale_mirror_flip"
+            android:src="@drawable/arrow_next_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pcTwoTeamMembersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/edit_text_bg_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_medium"
+        android:weightSum="2">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/members"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/pcTwoTeamMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@drawable/edit_text_bg_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_medium"
+        android:weightSum="2">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_score"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/totalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+</LinearLayout>

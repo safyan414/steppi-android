@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#283148</color>
+    <color name="colorPrimaryDark">#283148</color>
+    <color name="colorAccent">#283148</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="light_gray">#74615B5B</color>
+
+    <color name="theme_color">#283148</color>
+    <color name="edit_text_bg_color">#394D5C</color>
+    <color name="button_bg_normal_color">#B0B5B0</color>
+    <color name="button_bg_enabled_color">#06EBBF</color>
+    <color name="button_lang_bg_enabled_color">#FFD338</color>
+    <color name="edit_text_bg_stroke_color">#52628E</color>
+    <color name="light_blue">#6697EC</color>
+    <color name="red_color">#FF406E</color>
+    <color name="indicator_normal">#95A1AA</color>
+    <color name="orange_color">#FF8754</color>
+    <color name="violet_color">#A45AD7</color>
+    <color name="reward_bg">#3c4b5e</color>
+    <color name="text_white">#EDF2FF</color>
+    <color name="black_transparent">#37000000</color>
+    <color name="malibu_color">#5CD8FF</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+    <color name="tough_mudder_color">#FF6700</color>
+    <color name="yellow">#FFD600</color>
+</resources>

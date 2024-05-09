@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_normal"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/countryFlag"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_centerVertical="true" />
+
+    <com.steppi.steppifitness.views.STGothamRoundedLightMobileNumberTextView
+        android:id="@+id/countryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_toStartOf="@+id/selectedImage"
+        android:layout_toEndOf="@+id/countryFlag"
+        android:textAlignment="viewStart"
+        android:textDirection="ltr"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/tick_country"
+        android:visibility="invisible" />
+</RelativeLayout>

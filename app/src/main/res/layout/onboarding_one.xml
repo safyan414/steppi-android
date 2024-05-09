@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/theme_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center_horizontal"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/centerText"
+        android:layout_marginBottom="@dimen/margin_extra_large_xxxx"
+        android:gravity="bottom|center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/progressViewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal">
+
+            <LinearLayout
+                android:id="@+id/stepsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                    android:id="@+id/stepsTodayCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onboarding_steps"
+                    android:textColor="@color/button_lang_bg_enabled_color"
+                    android:textSize="@dimen/text_size_large_xxx" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/steps_today"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:src="@drawable/home_man" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/stepsProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:indeterminate="false"
+                android:max="13500"
+                android:progress="8100"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:secondaryProgress="13500" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+        android:id="@+id/centerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_bg_red_small"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_small"
+        android:text="@string/_1_900_step_to_reach_daily_goal"
+        android:textColor="@color/white"
+        android:textDirection="ltr"
+        android:textSize="@dimen/text_size_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/page_indication_layout"
+        android:layout_below="@+id/centerText"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_extra_large"
+        android:paddingEnd="@dimen/margin_extra_large"
+        android:paddingBottom="@dimen/margin_extra_large_xxxx">
+
+        <ImageView
+            android:id="@+id/stepImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_large_xxxx"
+            android:src="@drawable/onboarding_shoo" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:gravity="center"
+            android:text="@string/step"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_xxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/on_boarding_text_one"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/page_indication_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_extra_large"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/indicatorContainerScreen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="34dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/indicatorManScreen1"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/onboarding_man_blue"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerScreen1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/indicator1Screen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:src="@drawable/onboarding_line"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/indicator2Screen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:src="@drawable/onboarding_line" />
+
+                <ImageView
+                    android:id="@+id/indicator3Screen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:src="@drawable/onboarding_line" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

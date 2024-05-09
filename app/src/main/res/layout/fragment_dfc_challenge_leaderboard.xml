@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backgroundOne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dfc_leaderboard_bg" />
+
+        <ImageView
+            android:id="@+id/backgroundTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/dfc_leaderboard_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/backgroundStarOne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dfc_leaderboard_bg" />
+
+        <ImageView
+            android:id="@+id/backgroundStarTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/dfc_leaderboard_bg" />
+    </RelativeLayout>
+
+    <include layout="@layout/dfc_leader_board_sprite_list" />
+
+    <LinearLayout
+        android:id="@+id/myUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_normal_xx"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/stepsRemainingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/button_bg_red_small"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small">
+
+            <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                android:id="@+id/stepsRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:text="30000"
+                android:textColor="@color/button_lang_bg_enabled_color"
+                android:textSize="@dimen/text_size_normal_xxxx" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                android:id="@+id/centerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reach_next_rank"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xxxx" />
+        </LinearLayout>
+
+        <include layout="@layout/list_item_leader_board_list" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small_xx"
+    android:background="@drawable/rounded_theme_stroke_small"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:orientation="horizontal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/noOf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="@drawable/button_bg_red_small"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_medium_xxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:id="@+id/type"/>
+
+        <CheckBox
+            android:id="@+id/selectedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:button="@drawable/terms_check_selector" />
+    </LinearLayout>
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/challengeImage"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/place_holder_image"
+        app:siRadius="@dimen/margin_small" />
+
+    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+        android:id="@+id/challengeCost"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/button_bg_enabled_small"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_normal"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_medium_x" />
+
+    <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+        android:id="@+id/challengeDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/dumy_2"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_normal_xxx" />
+</LinearLayout>

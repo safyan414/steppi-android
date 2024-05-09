@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/edit_text_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/my_challenge_status_layout" />
+
+    <LinearLayout
+        android:id="@+id/addPrivateChallengeButton"
+        style="@style/ButtonSolidTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/addPrivateChallenge"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_normal"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/private_challenge_add_plus_icon"
+            android:drawablePadding="@dimen/margin_normal"
+            android:gravity="center"
+            android:text="@string/add_private_challenge"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/challengeListPullRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_normal">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                shimmer:duration="800"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/layout_placeholder_row" />
+
+                    <include layout="@layout/layout_placeholder_row" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_challenges"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:id="@+id/noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_challenge_data"
+                android:textColor="@color/text_white"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

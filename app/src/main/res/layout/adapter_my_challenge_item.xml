@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/corporateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:background="@drawable/edit_profile_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginEnd="@dimen/margin_normal_xx"
+            android:background="@drawable/corporate_icon_bg"
+            android:scaleType="centerCrop"
+            app:siBorderColor="@color/white"
+            app:siBorderWidth="1dp"
+            app:siRadius="@dimen/margin_small" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:id="@+id/challengeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@+id/endLayoutStatusDelete"
+            android:layout_toEndOf="@+id/logo"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium_x" />
+
+        <LinearLayout
+            android:id="@+id/endLayoutStatusDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="@dimen/margin_normal_xx"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+
+            <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ongoing"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xxx"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/deleteChallenge"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+        android:id="@+id/challengeThemeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/button_bg_enabled_small"
+        android:drawableStart="@drawable/ic_corporate"
+        android:drawablePadding="@dimen/margin_normal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_small_xx"
+        android:text="@string/organization"
+        android:textColor="@color/theme_color"
+        android:textSize="@dimen/text_size_normal_xx" />
+
+
+    <!--    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView-->
+    <!--        android:id="@+id/challengeName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/margin_normal"-->
+    <!--        android:layout_marginBottom="@dimen/margin_small"-->
+    <!--        android:text="Holiday Walk"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="@dimen/text_size_medium_x" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal_x"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@drawable/edit_text_bg"
+        app:cardBackgroundColor="@color/edit_text_bg_color"
+        app:cardCornerRadius="@dimen/margin_small"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edit_text_bg"
+                />
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:src="@drawable/youtube"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="4dp"
+                android:paddingRight="-10dp"
+
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+        android:id="@+id/descriptionTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:gravity="center_vertical"
+        android:text="@string/description_title"
+        android:textColor="@color/button_bg_enabled_color"
+        android:textSize="@dimen/text_size_normal_xxxx" />
+
+
+    <com.steppi.steppifitness.views.STPxRegularTextView
+        android:id="@+id/challengeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dumy"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal_xx" />
+
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:max="100"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
+            android:progress="50"
+            android:progressBackgroundTint="@color/edit_text_bg_color"
+            android:progressTint="@color/orange_color" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/progressPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="0%"
+            android:textColor="@color/text_white" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/stepsLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="509,402 Steps to go"
+            android:textColor="@color/text_white" />
+
+    </RelativeLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_small_xx"
+        android:gravity="center_vertical"
+        android:text="@string/details"
+        android:textColor="@color/button_bg_enabled_color"
+        android:textSize="@dimen/text_size_normal_xxxx" />
+
+    <LinearLayout
+        android:id="@+id/startDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_small_xx"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_small_xx"
+        android:paddingBottom="@dimen/margin_normal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_date"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/startDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/endDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small_xx"
+        android:background="@drawable/edit_text_bg_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_small_xx"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_small_xx"
+        android:paddingBottom="@dimen/margin_normal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_date"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/giftCell"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_small_xx"
+        android:background="@drawable/edit_text_bg_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_small_xx"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_small_xx"
+        android:paddingBottom="@dimen/margin_normal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gift_label"
+            android:textAlignment="viewStart"
+            android:textColor="@color/button_lang_bg_enabled_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                android:id="@+id/gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xxxx" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/participantsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small_xx"
+        android:background="@drawable/edit_text_bg_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_small_xx"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_small_xx"
+        android:paddingBottom="@dimen/margin_normal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teams"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/teams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/challengeTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/edit_text_bg_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_small_xx"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingEnd="@dimen/margin_small_xx"
+        android:paddingBottom="@dimen/margin_normal">
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/challengeTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challenge Type"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+            android:id="@+id/challengeTypeValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxxx" />
+
+    </LinearLayout>
+
+    <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+        android:id="@+id/joinNow"
+        style="@style/ButtonSolidTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_medium"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:gravity="center"
+        android:text="@string/challenge_details_button_label"
+        android:textAllCaps="true"
+        android:textColor="@color/theme_color" />
+</LinearLayout>

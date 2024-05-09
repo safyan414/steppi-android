@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_extra_large_x"
+        android:background="@color/theme_color"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/coverImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/edit_text_bg_color"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/steppiLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/stepii_logo_corporate" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/corporateLogoLayout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/corporate_icon_bg"
+                app:cardCornerRadius="@dimen/margin_small">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="@dimen/margin_small">
+
+                    <ImageView
+                        android:id="@+id/corporateLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_theme_small"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/corporate_account_icon" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/corporate_icon_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/corporate_account_icon"
+                android:visibility="gone"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="1dp"
+                app:siRadius="@dimen/margin_small"
+                tools:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+                        android:id="@+id/joinMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_extra_large_xxxx"
+                        android:gravity="center"
+                        android:text="@string/enter_your_corporate_email_id_msg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal_xxxx" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_extra_large_xxxx">
+
+                        <com.steppi.steppifitness.views.STGothamRoundedLightEditText
+                            android:id="@+id/corporateEmail"
+                            style="@style/EditTextStyle"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:drawableStart="@drawable/email_icon_normal"
+                            android:ellipsize="end"
+                            android:hint="@string/corporate_email"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            app:activeImage="@drawable/email_icon_active"
+                            app:inActiveImage="@drawable/email_icon_normal" />
+
+                        <ImageView
+                            android:id="@+id/infoIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:src="@drawable/info_icon_red"
+                            android:visibility="invisible"
+                            tools:visibility="visible" />
+                    </RelativeLayout>
+
+                    <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                        android:id="@+id/corporateReviewMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_extra_large_x"
+                        android:text="@string/corporate_review_message"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal_xxx"
+                        android:visibility="gone" />
+
+                    <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                        android:id="@+id/resendEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_extra_large_x"
+                        android:text="@string/resend_email"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal_xxxx"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_extra_large_x"
+                        android:orientation="vertical">
+
+                        <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                            android:id="@+id/joinCorporate"
+                            style="@style/ButtonSolidTheme"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/button_bg_light_blue"
+                            android:text="@string/submit_"
+                            android:textColor="@color/theme_color" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+        android:id="@+id/removeCorporateAccount"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_extra_large_x"
+        android:background="@drawable/button_solid_theme_stroke"
+        android:drawableStart="@drawable/logout_icon"
+        android:text="@string/remove_corporate_account"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>

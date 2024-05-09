@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_text_bg_color"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/biometricLogin"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/biometricIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/biometric_login_icon" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:id="@+id/viewBiometric"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".9"
+            android:background="@color/transparent"
+            android:drawableEnd="@drawable/arrow_dark_right"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="0dp"
+            android:text="@string/biometric_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unitConversion"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/unitConversionIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/unit_conversion_icon" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:id="@+id/viewUnitConversion"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".9"
+            android:background="@color/transparent"
+            android:drawableEnd="@drawable/arrow_dark_right"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="0dp"
+            android:text="@string/unit_conversion"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/languageLayout"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/languageIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_language" />
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            android:id="@+id/viewLanguage"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".9"
+            android:background="@color/transparent"
+            android:drawableEnd="@drawable/arrow_dark_right"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="0dp"
+            android:text="@string/language"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/text_size_normal_xxx" />
+    </LinearLayout>
+
+</LinearLayout>

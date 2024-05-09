@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:ignore="ContentDescription">
+
+    <include layout="@layout/header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/deviceConnectionIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:src="@drawable/fitbit_logo"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/deviceConnectionBg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/fitness_selection_fitbit" />
+
+            <LinearLayout
+                android:id="@+id/garminConnectionLayout"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/garmin_logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium_xx">
+
+                <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_installed_title"
+                    android:textColor="@color/light_blue"
+                    android:visibility="gone" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                    android:id="@+id/buttonConnect"
+                    style="@style/ButtonSolidTheme"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:background="@drawable/button_bg_light_blue_small"
+                    android:text="@string/button_connect"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_color" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                    android:id="@+id/whatIs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_is_fitbit"
+                    android:textColor="@color/light_blue" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/what_is_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Steppi allows you to track your steps using your smart phone or fitness tracker"
+                    android:textColor="@color/text_white" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                    android:id="@+id/installTitleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/install"
+                    android:textAllCaps="true"
+                    android:textColor="@color/light_blue" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/installDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="@color/text_white" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                    android:id="@+id/connectTitleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/button_connect"
+                    android:textAllCaps="true"
+                    android:textColor="@color/light_blue" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/connectDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="@color/text_white" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedMediumTextView
+                    android:id="@+id/needToInstall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/install_fitbit"
+                    android:textColor="@color/light_blue" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                    android:id="@+id/buttonInstall"
+                    style="@style/ButtonSolidTheme"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_extra_large"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:background="@drawable/button_bg_light_blue_small"
+                    android:text="@string/install"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

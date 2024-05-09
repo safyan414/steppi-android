@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deviceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_profile_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_normal"
+    android:paddingStart="@dimen/margin_large"
+    tools:ignore="ContentDescription">
+
+    <com.steppi.steppifitness.views.STGothamRoundedBookTextView
+        android:id="@+id/unit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textDirection="ltr"
+        android:textSize="@dimen/text_size_normal_xxx" />
+
+    <ImageView
+        android:id="@+id/selectUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/click_to_agree_tick"
+        android:visibility="invisible" />
+</LinearLayout>

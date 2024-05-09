@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "1064704609868",
+    "firebase_url": "https://steppi-3fefb.firebaseio.com",
+    "project_id": "steppi-3fefb",
+    "storage_bucket": "steppi-3fefb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064704609868:android:0eb2131d12458a4b756ee9",
+        "android_client_info": {
+          "package_name": "com.steppi.steppifitness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_FJtf2R-h9GXNN-UCwtTSwFCC145aZfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064704609868-o2ogf3ls21veg2lcgdtu9m4t0m14qbui.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.steppi.steppi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

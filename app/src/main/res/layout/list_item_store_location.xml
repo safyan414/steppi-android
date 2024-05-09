@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_normal"
+    tools:ignore="ContentDescription">
+
+    <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+        android:id="@+id/locationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_toStartOf="@+id/selectedImage"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal_xxx" />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/tick_country"
+        android:visibility="invisible" />
+</RelativeLayout>

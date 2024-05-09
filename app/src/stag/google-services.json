@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "368079364599",
+    "firebase_url": "https://steppi-dec8f.firebaseio.com",
+    "project_id": "steppi-dec8f",
+    "storage_bucket": "steppi-dec8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368079364599:android:090084e85bda6fe3c8cef2",
+        "android_client_info": {
+          "package_name": "com.steppi.steppifitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368079364599-6smmlgmupm1ot574nh96kgruejgmas7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_FJtf2R-h9GXNN-UCwtTSwFCC145aZfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368079364599-6smmlgmupm1ot574nh96kgruejgmas7k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "368079364599-oj2hgt70smid48gtvljm7j4pgqaqtkrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.steppi.steppi",
+                "app_store_id": "1496731586"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

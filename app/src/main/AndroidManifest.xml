@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.steppi.steppifitness">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Step 1: Add the following permission to the app  -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:name=".app.STApplication"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:icon="${appIcon}"
+        android:roundIcon="${appIconRound}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.samsung.android.health.permission.read"
+            android:value="com.samsung.health.step_count" />
+
+        <activity
+            android:name=".ui.base.STBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash.STSplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--filters for firebase dynamic links-->
+            <intent-filter><!--android:autoVerify="true"-->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!--https://steppi-app.com-->
+                <data
+                    android:host="app-links.steppi.com"
+                    android:pathPattern=".*"
+                    android:scheme="https" />
+
+                <data
+                    android:host="app.steppi.com"
+                    android:pathPattern=".*"
+                    android:scheme="https" />
+
+                <data
+                    android:host="dev-app-link.steppi.com"
+                    android:pathPattern=".*"
+                    android:scheme="https" />
+
+                <data
+                    android:host="dev-api.steppi.com"
+                    android:pathPattern=".*"
+                    android:scheme="https" />
+
+                <!--<data android:scheme="http" />
+                <data android:scheme="https" />-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.register.STRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.onboarding.STOnBoardingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.language_selection.STLanguageSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.STLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.login.STForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.device_connection.STChooseDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device_connection.STDeviceConnectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.STHomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.STContainerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.home.STWhatsNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ui.country.STCountrySelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.otp.STOtpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.common.STWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.challenges.publicTeamChallenge.STSelectTeamActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fitness_manager.fitbit.CustomTabAuthActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="steppi" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".fitness_manager.garmin.GarminCustomTabAuthActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="garmin_callback"
+                    android:scheme="steppi" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name" />
+
+        <service
+            android:name=".fcm.STDeleteTokenService"
+            android:exported="true" />
+
+        <service android:name=".fcm.STNotifyFireBaseMessagingService"
+            android:exported="true"
+            android:permission="${applicationId}.permission.PROCESS_PUSH_MSG">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--        Huawei messaging service   -->
+        <meta-data
+            android:name="push_kit_auto_init_enabled"
+            android:value="true" />
+        <service
+            android:name=".fcm.STNotifyHMSMessagingService"
+            android:permission="${applicationId}.permission.PROCESS_PUSH_MSG"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_icon" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+        <meta-data
+            android:name="com.survicate.surveys.workspaceKey"
+            android:value="@string/SURVEY_WORKSPACE_KEY" /> <!-- Testing Key : 799ec3d70dd3b9e2f3f08a8c44b482ea-->
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="102997517"/>
+
+    </application>
+</manifest>

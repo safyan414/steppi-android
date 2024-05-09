@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 30
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId "com.steppi.steppifitness"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file("steppi.jks")
+            storePassword "steppi 123"
+            keyAlias "steppi"
+            keyPassword "steppi 123"
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        def signingVariable = signingConfigs.release
+        stag {
+            versionName "1.0000.42"
+            versionCode 42
+            signingConfig signingVariable
+            buildConfigField "String", "API_URL", '"https://dev-api.steppi.com"'
+        //   buildConfigField "String", "API_URL", '"http://c5247503f6de.ngrok.io"'
+            // credentials for fitbit
+            buildConfigField "String", "CLIENT_ID", '"22BD8K"'
+            buildConfigField "String", "CLIENT_SECRET", '"d86c8ec9fe98e288a70f8865746a5976"'
+            //garmin
+            buildConfigField "String", "CONSUMER_KEY", '"13d82ba0-b386-4101-be13-4cac2be9471f"'
+            buildConfigField "String", "CONSUMER_SECRET", '"Pb8gH5bcjINesX2HwaVfVHYfe6YHypLYrXe"'
+            buildConfigField "String", "INSTA_BUG_KEY", '"0307dca28f6b07309beb419fe0be9ab7"'
+            resValue "string",  "SURVEY_WORKSPACE_KEY", '"799ec3d70dd3b9e2f3f08a8c44b482ea"'
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher",
+                    appIconRound: "@mipmap/ic_launcher"
+            ]
+        } // localhost http://192.168.0.106:8000
+        live {
+            versionCode 42
+            versionName "1.0000.42"
+            signingConfig signingVariable
+            buildConfigField "String", "API_URL", '"https://app.steppi.com"'
+            // Semi Live DFC : https://app.steppi.com
+            // Semi Live : https://api.steppi.com
+
+            // credentials for fitbit
+            buildConfigField "String", "CLIENT_ID", '"22BD8K"'
+            buildConfigField "String", "CLIENT_SECRET", '"d86c8ec9fe98e288a70f8865746a5976"'
+            //garmin
+            buildConfigField "String", "CONSUMER_KEY", '"13d82ba0-b386-4101-b0307dca28f6b07309beb419fe0be9ab7e13-4cac2be9471f"'
+            buildConfigField "String", "CONSUMER_SECRET", '"Pb8gH5bcjINesX2HwaVfVHYfe6YHypLYrXe"'
+            buildConfigField "String", "INSTA_BUG_KEY", '""'
+            resValue "string",  "SURVEY_WORKSPACE_KEY", '"799ec3d70dd3b9e2f3f08a8c44b482ea"'
+            manifestPlaceholders = [
+                    appIcon: "@drawable/app_icon",
+                    appIconRound: "@drawable/app_icon"
+            ]
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    api project(':xmsadapter')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Android core libraries
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //Networking Library
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.6.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.github.scribejava:scribejava-apis:6.4.1'
+
+
+    //Social Login
+    implementation 'com.facebook.android:facebook-android-sdk:5.1.1'
+
+    // MVI Library
+    implementation "io.reactivex.rxjava2:rxjava:2.2.10"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:2.2.0"
+    implementation "android.arch.lifecycle:runtime:1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    //UI Library
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "com.google.android.material:material:1.1.0-beta01"
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
+    implementation 'com.pacioianu.david:ink-page-indicator:1.3.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.timqi.sectorprogressview:library:2.0.1'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    // firebase dynamic link
+    implementation 'com.google.firebase:firebase-dynamic-links:19.1.0'
+
+    // Fitness SDK
+    implementation 'com.google.android.gms:play-services-fitness:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation fileTree(dir: '../libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation 'com.github.florent37:viewtooltip:1.1.8'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation('ch.acra:acra:4.5.0') {
+        exclude group: 'org.json'
+    }
+    implementation 'com.wang.avi:library:2.1.3'// Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    implementation 'androidx.biometric:biometric:1.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.survicate:survicate-sdk:1.2.4'
+    implementation 'com.instabug.library:instabug:10.0.0'
+    implementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.ed-george:AndroidVimeoExtractor:1.2.1'
+
+
+    //video player
+    implementation 'com.github.ed-george:AndroidVimeoExtractor:1.2.1'
+//    implementation 'com.instabug.library:instabug-with-okhttp-interceptor:8.1.1'
+    /**** huawei dependencies : START *****/
+
+    implementation 'com.huawei.hms:base:5.0.0.300'
+    //hi health
+    implementation 'com.huawei.hihealth:hihealthkit:5.0.0.300'
+    //location kit
+    implementation 'com.huawei.hms:location:5.0.2.301'
+    //app linking
+    implementation 'com.huawei.agconnect:agconnect-applinking:1.4.0.300'
+    //push kit
+    implementation 'com.huawei.hms:push:5.0.2.300'
+    //analytics kit
+    implementation'com.huawei.hms:hianalytics:5.0.1.301'
+    //crash service
+    implementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
+
+    /**** huawei dependencies : END *****/
+
+
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
+    //Lifecycle Scope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+}
+apply plugin: 'com.google.gms.google-services'

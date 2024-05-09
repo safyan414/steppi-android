@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_text_bg_color"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/arabicLayout"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingEnd="0dp"
+                android:textAlignment="textStart"
+                android:text="@string/arabic"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_xxx" />
+        <ImageView
+            android:id="@+id/arabicCheckIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tick_country"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/englishLayout"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingEnd="0dp"
+            android:textAlignment="textStart"
+            android:text="@string/english"
+            android:textDirection="locale"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_xxx" />
+
+        <ImageView
+            android:id="@+id/englishCheckIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tick_country"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

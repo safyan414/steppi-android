@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/logoEn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_ultra_large"
+            android:src="@drawable/lang_logo_en" />
+
+        <ImageView
+            android:id="@+id/logoAr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_ultra_large"
+            android:src="@drawable/lang_logo_ar" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/langContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/langArabic"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/button_height_medium"
+            android:background="@drawable/button_selector_normal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tickArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_extra_large"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <com.steppi.steppifitness.views.STArabicTextView
+                android:id="@+id/arabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/arabic"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium_xxx" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/langEnglish"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/button_height_medium"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/button_selector_normal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tickEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_extra_large"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/english"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium_xxx" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.steppi.steppifitness.views.STGothamRoundedBoldTextView
+        android:id="@+id/btnContinue"
+        style="@style/ButtonSolidTheme"
+        android:layout_height="@dimen/button_height_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:background="@drawable/button_selector_normal"
+        android:text="@string/continue_string"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:textAllCaps="true" />
+</RelativeLayout>

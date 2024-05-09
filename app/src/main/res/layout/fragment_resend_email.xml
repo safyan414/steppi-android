@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_extra_large_xxxx">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_ultra_large"
+        android:background="@drawable/button_solid_theme">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/test"
+            android:tint="@color/black" />
+
+        <LinearLayout
+            style="@style/EditTextSemiTransparent"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.steppi.steppifitness.views.STPxMediumEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="@string/corporate_email"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingEnd="0dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.steppi.steppifitness.views.STPxBoldTextView
+        android:id="@+id/resendEmailSubmit"
+        style="@style/ButtonSolidTheme"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/submit_" />
+</LinearLayout>

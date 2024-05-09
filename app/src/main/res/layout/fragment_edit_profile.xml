@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    tools:ignore="ContentDescription">
+
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_large">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp">
+
+                <RelativeLayout
+                    android:id="@+id/imageLayout"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_text_bg_small">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/profile_pic_place_holder" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/changeUserImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageLayout"
+                    android:layout_marginStart="-18dp"
+                    android:layout_marginBottom="-15dp"
+                    android:layout_toEndOf="@+id/imageLayout"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/edit_image" />
+            </RelativeLayout>
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightEditText
+                android:id="@+id/name"
+                style="@style/EditTextStyle"
+                android:drawableStart="@drawable/name_icon_normal"
+                android:hint="@string/first_name"
+                android:textSize="@dimen/text_size_normal_xxxx"
+                app:activeImage="@drawable/name_icon_active"
+                app:inActiveImage="@drawable/name_icon_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_bg">
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightMobileNumberTextView
+                    android:id="@+id/mobileNumber"
+                    style="@style/EditTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_toStartOf="@+id/editMobile"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/mobile_icon"
+                    android:hint="@string/mobile"
+                    android:textDirection="ltr"
+                    android:textSize="@dimen/text_size_normal_xxxx"
+                    app:activeImage="@drawable/mobile_icon_active"
+                    app:inActiveImage="@drawable/mobile_icon" />
+
+                <ImageView
+                    android:id="@+id/editMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_medium"
+                    android:src="@drawable/edit_icon" />
+            </RelativeLayout>
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightEditText
+                android:id="@+id/personalEmail"
+                style="@style/EditTextStyle"
+                android:drawableStart="@drawable/email_icon_normal"
+                android:hint="@string/personal_email"
+                android:textSize="@dimen/text_size_normal_xxxx"
+                app:activeImage="@drawable/email_icon_active"
+                app:inActiveImage="@drawable/email_icon_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/edit_text_bg">
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightPasswordTextView
+                    android:id="@+id/userPassword"
+                    style="@style/EditTextStyle"
+                    android:layout_marginTop="0dp"
+                    android:layout_toStartOf="@+id/editPassword"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/password_icon_normal"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:text="@string/password"
+                    android:textColor="@color/theme_color"
+                    android:textDirection="ltr"
+                    android:textSize="@dimen/text_size_normal_xxxx"
+                    app:activeImage="@drawable/password_icon_active"
+                    app:inActiveImage="@drawable/password_icon_normal" />
+
+                <ImageView
+                    android:id="@+id/editPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_medium"
+                    android:src="@drawable/edit_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="2">
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/male"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height_medium"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/male_icon_normal"
+                    android:drawablePadding="0dp"
+                    android:gravity="center"
+                    android:text="@string/male"
+                    android:textSize="@dimen/text_size_normal_xxxx" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/feMale"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height_medium"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/female_icon_normal"
+                    android:drawablePadding="0dp"
+                    android:gravity="center"
+                    android:text="@string/female"
+                    android:textSize="@dimen/text_size_normal_xxxx" />
+            </LinearLayout>
+
+            <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                android:id="@+id/userDob"
+                style="@style/EditTextStyle"
+                android:drawableStart="@drawable/dob_icon_normal"
+                android:hint="@string/date_of_birth"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_normal_xxxx"
+                app:activeImage="@drawable/dob_icon_active"
+                app:inActiveImage="@drawable/dob_icon_normal" />
+
+            <RelativeLayout style="@style/EditTextStyle">
+
+                <ImageView
+                    android:id="@+id/nationalityFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nationality_icon_normal" />
+
+                <com.steppi.steppifitness.views.STGothamRoundedLightTextView
+                    android:id="@+id/nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_toEndOf="@+id/nationalityFlag"
+                    android:drawableEnd="@drawable/arrow_dark_down"
+                    android:gravity="center_vertical"
+                    android:hint="@string/nationality"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_size_normal_xxxx" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

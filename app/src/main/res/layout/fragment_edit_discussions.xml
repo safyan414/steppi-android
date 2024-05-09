@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+ >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:padding="@dimen/margin_large_xxx"
+        android:orientation="vertical"
+        android:layout_weight=".4">
+
+        <com.steppi.steppifitness.views.STPxBoldEditText
+            android:id="@+id/comment_box"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/edittext_rounde_bg"
+            >
+
+        </com.steppi.steppifitness.views.STPxBoldEditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+        <com.steppi.steppifitness.views.STPxRegularTextView
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height_normal"
+            android:text="Delete"
+            android:layout_margin="@dimen/margin_medium"
+            android:gravity="center"
+            android:background="@drawable/edittext_rounde_bg"
+            android:textColor="@color/black"
+            />
+            <com.steppi.steppifitness.views.STPxRegularTextView
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/button_height_normal"
+                android:text="Update"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/button_solid_theme"
+                android:textColor="@color/white"
+                />
+
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>
